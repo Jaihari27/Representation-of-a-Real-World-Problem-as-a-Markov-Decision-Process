@@ -48,7 +48,22 @@ Using MDP, the robot can make decisions to maximize cleaning efficiency.
 ### 6. Python Program
 
 ```
-import randomprint("SMART ROBOT VACUUM CLEANER USING MDP")print("------------------------------------")# Statesstates = ["Clean", "Dirty", "Low Battery"]# Actionsactions = ["Clean", "Move", "Recharge"]# Discount factorgamma = 0.9# Rewardsrewards = {    "Clean": 10,    "Dirty": -1,    "Low Battery": -5}# Transition probabilitiestransitions = {    "Dirty": {        "Clean": [0.8, 0.1, 0.1],        "Move": [0.2, 0.6, 0.2],        "Recharge": [0.1, 0.7, 0.2]    },    "Clean": {        "Clean": [0.7, 0.2, 0.1],        "Move": [0.3, 0.6, 0.1],        "Recharge": [0.8, 0.1, 0.1]    },    "Low Battery": {        "Clean": [0.1, 0.2, 0.7],        "Move": [0.1, 0.1, 0.8],        "Recharge": [0.7, 0.2, 0.1]    }}# Current statecurrent_state = "Dirty"# Select actionaction = "Clean"# Determine next staterandom.seed(1)next_state = random.choices(    states,    weights=transitions[current_state][action],    k=1)[0]# Calculate rewardreward = rewards[next_state]# Display resultsprint("Current State:", current_state)print("Selected Action:", action)print("Next State:", next_state)print("Reward:", reward)print("Discount Factor:", gamma)print("MDP Simulation Completed Successfully!")
+import randomprint("SMART ROBOT VACUUM CLEANER USING MDP")
+print("------------------------------------")
+# Statesstates = ["Clean", "Dirty", "Low Battery"]
+# Actionsactions = ["Clean", "Move", "Recharge"]
+# Discount factorgamma = 0.9
+# Rewardsrewards = {    "Clean": 10,    "Dirty": -1,    "Low Battery": -5}
+# Transition probabilitiestransitions = {    "Dirty": {        "Clean": [0.8, 0.1, 0.1],        "Move": [0.2, 0.6, 0.2],        "Recharge": [0.1, 0.7, 0.2]    },    "Clean": {        "Clean": [0.7, 0.2, 0.1],        "Move": [0.3, 0.6, 0.1],        "Recharge": [0.8, 0.1, 0.1]    },    "Low Battery": {        "Clean": [0.1, 0.2, 0.7],        "Move": [0.1, 0.1, 0.8],        "Recharge": [0.7, 0.2, 0.1]    }}
+# Current statecurrent_state = "Dirty"
+# Select actionaction = "Clean"# Determine next staterandom.seed(1)next_state = random.choices(    states,    weights=transitions[current_state][action],    k=1)[0]
+# Calculate rewardreward = rewards[next_state]
+# Display resultsprint("Current State:", current_state)
+print("Selected Action:", action)
+print("Next State:", next_state)
+print("Reward:", reward)
+print("Discount Factor:", gamma)
+print("MDP Simulation Completed Successfully!")
 ```
 
 ### 7. Output
