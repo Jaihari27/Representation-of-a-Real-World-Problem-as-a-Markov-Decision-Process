@@ -290,7 +290,8 @@ print("Expected Immediate Reward:", round(expected_reward, 2))
 
 ## Output
 
-<img width="907" height="597" alt="image" src="https://github.com/user-attachments/assets/84d0c53b-5146-473a-9945-6b954f8de872" />
+<img width="1012" height="605" alt="image" src="https://github.com/user-attachments/assets/6fde30fc-d88f-49d4-acd4-864aae5c13ec" />
+
 
 
 Calculation of Expected Immediate Reward
